@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewpoint" content="wide:device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>代辦事項</title>
+    <link rel="stylesheet" type="text/css" href="./scss/todo-list.css" />
+    <script src="to-do-list.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <p>To-Do List</p>
+      </header>
+      <main>
+        <div id="addbar">
+          <input
+            id="work"
+            class="input"
+            type="text"
+            placeholder="請輸入代辦事項..."
+          />
+          <select id="time" onchange="change()">
+            <option value="none" selected disable hidden>選擇事件分類</option>
+            <option value="normal">一般</option>
+            <option value="important">重要</option>
+            <option value="urgent">緊急</option>
+          </select>
+          <button onclick="add()" class="add">+</button>
+        </div>
+        <div id="taskContent"><ul id="list"></ul></div>
+      </main>
+
+      <div class="last">
+        <!-- <button id="text" onclick="saveTextAsFile()">匯出為純文字</button> -->
+        <button id="restart" onclick="restart()">全部刪除</button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/78641436bf.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

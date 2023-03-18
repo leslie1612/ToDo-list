@@ -1,0 +1,214 @@
+$themeColor: rgb(74, 78, 95);
+$fontColor: white;
+$normal: rgb(73, 73, 73);
+$important: rgb(217, 123, 0);
+$urgent: rgb(212, 1, 0);
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+li {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 245, 241);
+
+  // 標題
+  div.container {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    header {
+      background-color: $themeColor;
+      width: 60vw;
+      height: 6vh;
+      margin: 20px;
+      padding: 5px;
+      border-radius: 10px;
+      position: sticky;
+      top: 10px;
+      z-index: 2;
+      p {
+        font-size: 30px;
+        font-weight: bold;
+        color: $fontColor;
+        text-align: center;
+      }
+    }
+
+    main {
+      // 代辦事項輸入列
+      div#addbar {
+        display: flex;
+        flex-wrap: wrap;
+        width: 60vw;
+        height: 40px;
+        margin: 20px;
+        border-bottom: 3px solid $themeColor;
+        align-items: center;
+        position: sticky;
+        top: 60px;
+        z-index: 2;
+        input {
+          font-size: 20px;
+          flex: 6 1 40%;
+          border: 0px;
+          margin: 0 5px 0 10px;
+          background-color: $fontColor;
+        }
+        select {
+          color: $fontColor;
+          font-size: 15px;
+          font-weight: 600;
+          flex: 2 1 15%;
+          height: 30px;
+          margin: 5px;
+          padding: 5px;
+          border: 0px;
+          border-radius: 10px;
+          background-color: $themeColor;
+          &:hover {
+            background-color: rgb(118, 125, 152);
+            cursor: pointer;
+          }
+        }
+        button.add {
+          color: $fontColor;
+          font-size: 28px;
+          flex: 1 1 5%;
+          height: 30px;
+          margin: 5px;
+          border: 0px;
+          border-radius: 10px;
+          background-color: $themeColor;
+          &:hover {
+            background-color: rgb(255, 145, 0);
+            cursor: pointer;
+          }
+        }
+      }
+
+      // 代辦事項內容
+      div#taskContent {
+        padding: 10px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        ul#list {
+          width: 80%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          li {
+            width: 100%;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            background-color: rgb(250, 250, 250);
+            display: flex;
+            // 點擊完成按鈕後改變
+            &.fade {
+              background-color: rgb(222, 222, 222);
+              width: 95%;
+            }
+            // 不同事件分類
+            span {
+              flex-grow: 6;
+              &.normal {
+                color: $normal;
+                font-weight: normal;
+              }
+              &.important {
+                color: $important;
+                font-weight: bold;
+              }
+              &.urgent {
+                color: $urgent;
+                font-weight: bolder;
+              }
+            }
+            // 事件刪除按鈕
+            button.del {
+              width: 25px;
+              height: 25px;
+              border: 0;
+              border-radius: 50%;
+              background-color: rgb(255, 98, 77);
+              color: $fontColor;
+              font-weight: 900;
+              margin: 0 5px 0 5px;
+              &:hover {
+                cursor: pointer;
+                background-color: rgb(255, 42, 0);
+              }
+            }
+            // 事件完成按鈕
+            button.done {
+              width: 25px;
+              height: 25px;
+              border: 3px dashed rgb(0, 208, 45);
+              border-radius: 50%;
+              font-weight: 900;
+              margin: 0 5px 0 5px;
+              background-color: $fontColor;
+              color: rgb(0, 208, 45);
+              &:hover {
+                cursor: pointer;
+              }
+            }
+            button.OK {
+              width: 25px;
+              height: 25px;
+              border: 3px solid rgb(0, 208, 45);
+              border-radius: 50%;
+              font-weight: 900;
+              margin: 0 5px 0 5px;
+              background-color: rgb(0, 208, 45);
+              color: $fontColor;
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // 全部刪除按鈕
+    div.last {
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px;
+      button#restart {
+        color: $fontColor;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: rgb(255, 98, 77);
+        border: 0px;
+        border-radius: 10px;
+        margin: 20px;
+        padding: 10px;
+        translate: -20%;
+        &:hover {
+          background-color: rgb(255, 42, 0);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+li {
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}

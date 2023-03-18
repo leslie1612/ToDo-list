@@ -1,0 +1,195 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 245, 241);
+}
+body div.container {
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  margin: 20px;
+}
+body div.container header {
+  background-color: rgb(74, 78, 95);
+  width: 60vw;
+  height: 6vh;
+  margin: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+  z-index: 2;
+}
+body div.container header p {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+body div.container main div#addbar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60vw;
+  height: 40px;
+  margin: 20px;
+  border-bottom: 3px solid rgb(74, 78, 95);
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 60px;
+  z-index: 2;
+}
+body div.container main div#addbar input {
+  font-size: 20px;
+  flex: 6 1 40%;
+  border: 0px;
+  margin: 0 5px 0 10px;
+  background-color: white;
+}
+body div.container main div#addbar select {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  flex: 2 1 15%;
+  height: 30px;
+  margin: 5px;
+  padding: 5px;
+  border: 0px;
+  border-radius: 10px;
+  background-color: rgb(74, 78, 95);
+}
+body div.container main div#addbar select:hover {
+  background-color: rgb(118, 125, 152);
+  cursor: pointer;
+}
+body div.container main div#addbar button.add {
+  color: white;
+  font-size: 28px;
+  flex: 1 1 5%;
+  height: 30px;
+  margin: 5px;
+  border: 0px;
+  border-radius: 10px;
+  background-color: rgb(74, 78, 95);
+}
+body div.container main div#addbar button.add:hover {
+  background-color: rgb(255, 145, 0);
+  cursor: pointer;
+}
+body div.container main div#taskContent {
+  padding: 10px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+body div.container main div#taskContent ul#list {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body div.container main div#taskContent ul#list li {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgb(250, 250, 250);
+  display: flex;
+}
+body div.container main div#taskContent ul#list li.fade {
+  background-color: rgb(222, 222, 222);
+  width: 95%;
+}
+body div.container main div#taskContent ul#list li span {
+  flex-grow: 6;
+}
+body div.container main div#taskContent ul#list li span.normal {
+  color: rgb(73, 73, 73);
+  font-weight: normal;
+}
+body div.container main div#taskContent ul#list li span.important {
+  color: rgb(217, 123, 0);
+  font-weight: bold;
+}
+body div.container main div#taskContent ul#list li span.urgent {
+  color: rgb(212, 1, 0);
+  font-weight: bolder;
+}
+body div.container main div#taskContent ul#list li button.del {
+  width: 25px;
+  height: 25px;
+  border: 0;
+  border-radius: 50%;
+  background-color: rgb(255, 98, 77);
+  color: white;
+  font-weight: 900;
+  margin: 0 5px 0 5px;
+}
+body div.container main div#taskContent ul#list li button.del:hover {
+  cursor: pointer;
+  background-color: rgb(255, 42, 0);
+}
+body div.container main div#taskContent ul#list li button.done {
+  width: 25px;
+  height: 25px;
+  border: 3px dashed rgb(0, 208, 45);
+  border-radius: 50%;
+  font-weight: 900;
+  margin: 0 5px 0 5px;
+  background-color: white;
+  color: rgb(0, 208, 45);
+}
+body div.container main div#taskContent ul#list li button.done:hover {
+  cursor: pointer;
+}
+body div.container main div#taskContent ul#list li button.OK {
+  width: 25px;
+  height: 25px;
+  border: 3px solid rgb(0, 208, 45);
+  border-radius: 50%;
+  font-weight: 900;
+  margin: 0 5px 0 5px;
+  background-color: rgb(0, 208, 45);
+  color: white;
+}
+body div.container main div#taskContent ul#list li button.OK:hover {
+  cursor: pointer;
+}
+body div.container div.last {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+body div.container div.last button#restart {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: rgb(255, 98, 77);
+  border: 0px;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+  translate: -20%;
+}
+body div.container div.last button#restart:hover {
+  background-color: rgb(255, 42, 0);
+  cursor: pointer;
+}
+
+li {
+  box-shadow: 0 10px 6px -6px #777;
+}/*# sourceMappingURL=todo-list.css.map */

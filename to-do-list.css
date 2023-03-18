@@ -1,0 +1,19 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+.important {
+  color: orange;
+}
+.urgent {
+  color: red;
+}
+
+.important-input {
+  color: orange;
+}
+.urgent-input {
+  color: red;
+}
